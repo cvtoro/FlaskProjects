@@ -1,0 +1,189 @@
+
+<!-- Cecilia Villatoro -->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">
+		#row1{
+			overflow: hidden;
+		}
+		#row2{
+			overflow: hidden;
+		}
+		#row3{
+			overflow: hidden;
+		}
+		#row4{
+			overflow: hidden;
+		}
+
+		#row5{
+			overflow: hidden;
+		}
+		#month{
+			width: 700px;
+			height: 60px;
+			background-color:  #E65C8A;
+			border-bottom: 10px solid white;
+
+		}
+		#days{
+			overflow: hidden;
+		}
+		.days div{
+			background-color: #E65C8A;
+			width: 100px;
+			height: 60px;
+			float: left;
+			border-bottom: 1px solid white;
+		}
+		.cal1 div{
+			/*border:1px solid black;*/
+			width: 100px;
+			height: 100px;
+			float:left;
+			background-color: #FF6699
+			
+
+		}
+		.month p{
+			font-size: 30px;
+			padding-top: 10px;
+		}
+		p{
+			font-family: 'Lato', sans-serif;
+			color: white;
+			text-align: center;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div id = 'month' class = 'month'></div>
+
+	<div id = 'days' class = 'days'>
+		<div ><p>S</p></div>
+		<div ><p>M</p></div>
+		<div ><p>T</p></div>
+		<div ><p>W</p></div>
+		<div ><p>T</p></div>
+		<div><p>F</p></div>
+		<div ><p>S</p></div>
+
+	</div>
+
+	<div id = "row1" class = 'cal1'> </div>
+	
+	<div id = 'row2' class = 'cal1' > </div>
+
+	<div id = 'row3' class = 'cal1'> </div>
+
+	<div id = 'row4' class = 'cal1'> </div>
+
+	<div id = 'row5' class = 'cal1'> </div>
+
+	<div id = 'row6' class = 'cal1'> </div>
+
+
+
+	<!-- </div> -->
+	
+<script type="text/javascript">
+	$(document).ready(function () {
+
+
+		var createCalendar = function(m, year){
+
+		var month = ['January', 'February', 'March', 'April', 'May', 'June', 
+		'July', 'August', 'September', 'October', 'November', 'December']
+
+		
+		var currmonth = m;
+		// alert(currmonth);
+		var curryear = year;
+		var firsdaymonth = new Date(curryear , currmonth , "01").getDay();
+		var numdaysmonth = [31, 28, 31, 30, 31, 30,31, 31, 30, 31, 30, 31]
+
+		$('#month').html('<p>' + month[currmonth] + ' ' + curryear +'<p>');
+		
+
+		var caldiv = document.getElementById("row1");
+	
+
+		var ClndrRow = function(){
+			
+
+			for (var i = 0; i < 7; i++) {
+				var newDiv = document.createElement('div');
+			// newDiv.id = 'c' + i;
+			    newDiv.className = 'cal2';
+				caldiv.appendChild(newDiv);
+			};
+
+		}
+
+
+		ClndrRow(); 
+		caldiv = document.getElementById("row2");
+		ClndrRow();
+		caldiv = document.getElementById("row3");
+		ClndrRow();
+		caldiv = document.getElementById("row4");
+		ClndrRow();
+		caldiv = document.getElementById("row5");
+		ClndrRow();
+		caldiv = document.getElementById("row6");
+		ClndrRow();
+
+		var x = 0;
+		var count = 1;
+		// var days = ['S','M', 'T', 'W', 'T', 'F', 'S'];
+		$( '.cal2' ).each(function( i ) {
+      		// if ( (this.id) != 'row' + 1  && (this.id) != 'row' + 2  &&  (this.id) != 'row' + 3  &&  (this.id) != 'row' + 4 &&  (this.id) != 'month' &&  (this.id) != 'days'){   
+      			
+      			if (x >= firsdaymonth && count <= numdaysmonth[currmonth]){
+      				$(this).append("<p>"+ count + "</p>");
+					count++;   	
+    			}
+    			else if ( x < firsdaymonth){
+    			x ++;
+    			}	
+    			else{
+
+    				x = 0;
+    			}
+  		});
+
+  		$( ".cal2" ).hover( 
+		function() {
+   		 		$(this).css("background-color", "yellow"); 
+   		 	
+  		}, function() {
+  		
+   				$(this).css("background-color", "#FF6699");
+   		
+  		}
+		);
+
+  		}
+
+  		var d = new Date();
+  		var month = d.getMonth();
+		var year = d.getFullYear();
+  		createCalendar(month, year);
+  		var month = 7;
+  		$( ".cal1" ).empty();
+  		$('.month').find('*').not('.className').remove();
+  		createCalendar(month, year);
+
+
+
+	});
+</script>
+</body>
+</html>
