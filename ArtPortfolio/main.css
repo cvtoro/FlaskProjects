@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+
+	background-image: url("./images/glacier.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+}
+
+#arrow{
+	position: fixed;
+	bottom: 0px ;
+	left: 50% ;
+	margin-left: -64px ;
+
+}
+
+.head h1{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+
+}
+
+.head{
+
+	width: 600px;
+	height:160px;
+	background-color: rgba(51, 204, 204, 0.5);
+	position:fixed;
+	left: 50%;
+	top:50%;
+	margin-top: -80px;
+    margin-left: -300px;
+
+
+
+}

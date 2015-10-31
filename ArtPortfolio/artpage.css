@@ -1,0 +1,24 @@
+body{
+	background-color: black;
+}
+
+.box div{
+
+	height: 300px;
+	width: 300px;
+	border: 1px solid white;
+	float: left;
+	margin-left: 50px;
+
+	/*display: inline;*/
+}
+
+.box{
+	padding: 50px;
+}
+.box img{
+	image-orientation: from-image;
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	height: 300px;
+	width:300px;
+}
