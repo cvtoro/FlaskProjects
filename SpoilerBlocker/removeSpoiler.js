@@ -1,22 +1,17 @@
+countRemoved = 0;
 
-// This delay ensures that the elements have been created by Facebook's
-// scripts before we attempt to replace them
- window.setInterval(function () {
-    
-    
+window.Remove = function Remove(){
      console.log("here");
      
 
-
-
-      var tvShowName = new RegExp("BuzzFeed");
+      var tvShowName = new RegExp("Arrow");
 
      
 
-    remove = false;
-    countRemoved = 0;
+    rem = false;
+    
 
-//show a count in icon, like adBlock
+//show a count in icon
 //maybe option to show removed article
 //hide all newsfeed until check tkhat its ok?
 
@@ -31,25 +26,28 @@
           
 
           if(tvShowName.test(this.innerHTML)){
-            countRemoved++;
+            
             console.log("found");
-              remove = true;
+              rem = true;
               return false;
           }
 
 
         });
 
-        if(remove){
-          console.log("removed one reference to " + tvShowName);
+        if(rem){
+          countRemoved = countRemoved + 1;
+          console.log("removed " + countRemoved + " reference to " + tvShowName);
           this.remove();
+          rem = false;
         }
-        remove = false;
+       
 
       });
+}
+ 
+Remove();
 
-     
-
-
-}, 2000);
-
+//timer to check newsfeed every 2 seconds for articles referencing tv Show
+setInterval(function(){Remove()}, 2000);
+    
