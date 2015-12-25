@@ -12,6 +12,9 @@
 	    "default_icon": "./assets/icon16.png"
 	  
 	},
+	"web_accessible_resources": [
+    	"/assets/Spoilers.png"
+  	],
 	"content_scripts": [
 		{
 			"matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
@@ -23,4 +26,5 @@
 	{
 	  "scripts":["background.js"]
 	}
+
 }

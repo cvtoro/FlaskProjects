@@ -1,23 +1,18 @@
 countRemoved = 0;
+var spoilerImg = chrome.extension.getURL('/assets/Spoilers.png');
 
 window.Remove = function Remove(){
      console.log("here");
      
 
-      var tvShowName = new RegExp("Arrow");
+      var tvShowName = new RegExp("BuzzFeed");
 
      
 
     rem = false;
     
 
-//show a count in icon
-//maybe option to show removed article
-//hide all newsfeed until check tkhat its ok?
-
-//abbreviations as well
-//user input
-
+    
         //check each newsfeed article
         $('div[class^="userContentWrapper"]').each(function(){
    
@@ -38,7 +33,12 @@ window.Remove = function Remove(){
         if(rem){
           countRemoved = countRemoved + 1;
           console.log("removed " + countRemoved + " reference to " + tvShowName);
-          this.remove();
+
+          chrome.runtime.sendMessage(countRemoved);
+
+          var width = $(this).width();
+          var height = $(this).height();
+          var replaced = $(this).replaceWith("<img src =" + spoilerImg+ " width = '" + width+ "' height = '"+ height + "'>");
           rem = false;
         }
        
