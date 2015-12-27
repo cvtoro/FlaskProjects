@@ -11,20 +11,20 @@ $(function() {
     });
 
     
-    // document.getElementById("form").addEventListener("onSubmit", handleClick(), false);
+    document.getElementById("form").addEventListener("onSubmit", handleClick(), false);
     	
 
 
-	document.forms[0].onsubmit = function(e) {
-		console.log('submitted');
-	    e.preventDefault(); // Prevent submission
-	    var show = document.getElementById('show').value;
-	    console.log(show);
-		chrome.runtime.sendMessage({
-			        from: "popup",
-			        subject: show
-		});
-	};
+	// document.forms[0].onsubmit = function(e) {
+	// 	console.log('submitted');
+	//     e.preventDefault(); // Prevent submission
+	//     var show = document.getElementById('show').value;
+	//     console.log(show);
+	// 	chrome.runtime.sendMessage({
+	// 		        from: "popup",
+	// 		        subject: show
+	// 	});
+	// };
 
 
     function handleClick() {
