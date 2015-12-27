@@ -1,53 +1,73 @@
+
 countRemoved = 0;
 var spoilerImg = chrome.extension.getURL('/assets/Spoilers.png');
+var tvShow = "";
+chrome.runtime.onMessage.addListener(function(msg) {
+    console.log('received show');
+    if (msg.from == "popup") {
+        tvShow = msg.subject;
+    }
+});
 
-window.Remove = function Remove(){
-     console.log("here");
-     
 
-      var tvShowName = new RegExp("BuzzFeed");
+window.Remove = function Remove() {
 
-     
 
-    rem = false;
-    
+    if (tvShow != "") {
+        var tvShowName = new RegExp(tvShow);
 
-    
-        //check each newsfeed article
-        $('div[class^="userContentWrapper"]').each(function(){
-   
+
+
+        rem = false;
+
+
       
-        $(this).find("*").each(function(){
-          
 
-          if(tvShowName.test(this.innerHTML)){
-            
-            console.log("found");
-              rem = true;
-              return false;
-          }
+        //abbreviations as well
+
+        //check each newsfeed article
+        $('div[class^="userContentWrapper"]').each(function() {
+
+
+            $(this).find("*").each(function() {
+
+
+                if (tvShowName.test(this.innerHTML)) {
+
+                    rem = true;
+                    return false;
+                }
+
+
+            });
+
+            if (rem) {
+                countRemoved = countRemoved + 1;
+                console.log("removed " + countRemoved + " reference to " + tvShowName);
+                //send message to update badge count
+                chrome.runtime.sendMessage({
+                    from: "removeSpoiler",
+                    count: countRemoved
+                });
+
+                var width = $(this).width();
+                var height = $(this).height();
+                this.id = "blur";
+                $(this).after("<div id = 'button'>Possible Spoiler<br> Click To Show</div>");
+
+
+                // var replaced = $(this).replaceWith("<div><img id = 'image' src =" + spoilerImg+ " width = '" + width+ "' height = '"+ height + "'><div id = 'button'>Possible Spoiler, Click To Show</div></div>");
+                rem = false;
+            }
 
 
         });
-
-        if(rem){
-          countRemoved = countRemoved + 1;
-          console.log("removed " + countRemoved + " reference to " + tvShowName);
-
-          chrome.runtime.sendMessage(countRemoved);
-
-          var width = $(this).width();
-          var height = $(this).height();
-          var replaced = $(this).replaceWith("<img src =" + spoilerImg+ " width = '" + width+ "' height = '"+ height + "'>");
-          rem = false;
-        }
-       
-
-      });
+    }
 }
- 
+
 Remove();
 
 //timer to check newsfeed every 2 seconds for articles referencing tv Show
-setInterval(function(){Remove()}, 2000);
-    
+setInterval(function() {
+    Remove()
+}, 2000);
