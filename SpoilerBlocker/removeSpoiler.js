@@ -1,19 +1,24 @@
-
-countRemoved = 0;
-var spoilerImg = chrome.extension.getURL('/assets/Spoilers.png');
 var tvShow = "";
-chrome.runtime.onMessage.addListener(function(msg) {
-    console.log('received show');
+chrome.runtime.onMessage.addListener(function (msg, sendResponse) {
+    
     if (msg.from == "popup") {
         tvShow = msg.subject;
+        sendResponse({reply: "heard"});
     }
 });
 
+countRemoved = 0;
+// var spoilerImg = chrome.extension.getURL('/assets/Spoilers.png');
+
+
+
 
 window.Remove = function Remove() {
+  console.log(tvShow);
 
 
     if (tvShow != "") {
+        console.log("here");
         var tvShowName = new RegExp(tvShow);
 
 

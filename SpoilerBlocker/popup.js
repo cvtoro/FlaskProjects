@@ -1,22 +1,13 @@
 
 $(function() {
 	console.log("console logging works");
-    var availableTags = [
-        "Arrow",
-        "Homeland",
-
-    ];
-    $("#shows").autocomplete({
-        source: availableTags
-    });
-
-    
-    document.getElementById("form").addEventListener("onSubmit", handleClick(), false);
-    	
+  
+    document.getElementById("form").addEventListener("submit", handleClick, false);
+   
 
 
 	// document.forms[0].onsubmit = function(e) {
-	// 	console.log('submitted');
+	// 	alert("submitted");
 	//     e.preventDefault(); // Prevent submission
 	//     var show = document.getElementById('show').value;
 	//     console.log(show);
@@ -27,14 +18,18 @@ $(function() {
 	// };
 
 
-    function handleClick() {
-    	
-		var show = form.elements[0].value;
-		console.log(show);
+    function handleClick(e) {
+    	e.preventDefault();
+   		var val = document.getElementById("show").value;
+   		console.log(val);
+   		
 	    chrome.runtime.sendMessage({
 	        from: "popup",
-	        subject: show
+	        subject: val
+	    }, function(res){
+	    	// console.log(res.reply);
 	    });
+	
 	}
 
 	function checkSubmit(e) {
@@ -45,6 +40,14 @@ $(function() {
 	    }
 	}
 
+	 var availableTags = [
+        "Arrow",
+        "Homeland",
+
+    ];
+    $("#show").autocomplete({
+        source: availableTags
+    });
 
 });
 
