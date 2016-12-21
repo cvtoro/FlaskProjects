@@ -70,11 +70,13 @@ class ConversionViewController: UIViewController, UITextFieldDelegate{
     func textField(textField: UITextField,
             shouldChangeCharactersInRange range: NSRange,
             replacementString string: String) -> Bool{
-       let existingTextHasDecimalSeperator = textField.text?.rangeOfString(".")
-       let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+      let currentLocale = NSLocale.currentLocale()
+      let decimalSeparator = currentLocale.objectForKey(NSLocaleDecimalSeparator) as! String
+      let existingTextHasDecimalSeparator = textField.text?.rangeOfString(decimalSeparator)
+      let replacementTextHasDecimalSeparator = string.rangeOfString(decimalSeparator)
         
                 
-        if existingTextHasDecimalSeperator != nil &&
+        if existingTextHasDecimalSeparator != nil &&
             replacementTextHasDecimalSeparator != nil{
                 return false
         }
@@ -85,8 +87,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func fahrenheitFieldEditingChanged(textField: UITextField){
-        if let text = textField.text, value = Double(text){
-            fahrenheightValue = value
+        if let text = textField.text, number = numberFormatter.numberFromString(text){
+            fahrenheightValue = number.doubleValue
         }else{
             fahrenheightValue = nil
         }

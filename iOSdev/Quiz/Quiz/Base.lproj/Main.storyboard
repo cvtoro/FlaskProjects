@@ -47,11 +47,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLe-zl-IAL">
+                                <rect key="frame" x="279" y="47" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BuF-Uv-lIe" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="287-9i-C9I"/>
+                            <constraint firstItem="ZLe-zl-IAL" firstAttribute="top" secondItem="BuF-Uv-lIe" secondAttribute="top" id="4g3-pf-vGh"/>
                             <constraint firstItem="BuF-Uv-lIe" firstAttribute="centerX" secondItem="tzm-Nc-6Rc" secondAttribute="centerX" id="NGy-Hg-iqH"/>
                             <constraint firstItem="WPg-QH-3Pb" firstAttribute="top" secondItem="tzm-Nc-6Rc" secondAttribute="bottom" constant="64" id="NsA-MG-XOb"/>
+                            <constraint firstItem="ZLe-zl-IAL" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="PDY-ey-hjH"/>
                             <constraint firstItem="k5N-qB-TgB" firstAttribute="centerX" secondItem="tzm-Nc-6Rc" secondAttribute="centerX" id="Qk2-nY-eeX"/>
                             <constraint firstItem="WPg-QH-3Pb" firstAttribute="centerX" secondItem="tzm-Nc-6Rc" secondAttribute="centerX" id="TZ0-10-Dg3"/>
                             <constraint firstItem="tzm-Nc-6Rc" firstAttribute="top" secondItem="BuF-Uv-lIe" secondAttribute="bottom" constant="2" id="ZHt-5G-kLP"/>
@@ -62,7 +71,8 @@
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="WPg-QH-3Pb" id="cBF-5b-AUb"/>
-                        <outlet property="questionLabel" destination="BuF-Uv-lIe" id="wWI-FF-g2T"/>
+                        <outlet property="currentQuestionLabel" destination="BuF-Uv-lIe" id="nVa-gn-bzb"/>
+                        <outlet property="nextQuestionLabel" destination="ZLe-zl-IAL" id="ItZ-31-Zcy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

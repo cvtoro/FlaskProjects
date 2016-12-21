@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA164F001C59FD0D00800F8C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA164F021C59FD0D00800F8C /* Localizable.strings */; };
+		DAD7AE481C5755E70037C91C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7AE471C5755E70037C91C /* WebViewController.swift */; };
 		DAE91C2C1C4F635300345541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE91C2B1C4F635300345541 /* AppDelegate.swift */; };
 		DAE91C311C4F635300345541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE91C2F1C4F635300345541 /* Main.storyboard */; };
 		DAE91C331C4F635300345541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE91C321C4F635300345541 /* Assets.xcassets */; };
@@ -36,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA164F011C59FD0D00800F8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA164F031C59FD1200800F8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA164F041C59FD1300800F8C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA164F051C59FE1100800F8C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		DA164F061C59FE1100800F8C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAD7AE471C5755E70037C91C /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DAD7AE4A1C59F3FE0037C91C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		DAD7AE4B1C59F4E10037C91C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		DAE91C281C4F635300345541 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE91C2B1C4F635300345541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE91C301C4F635300345541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,9 +116,11 @@
 				DAE91C5D1C52056700345541 /* ConversionViewController.swift */,
 				DAE91C2B1C4F635300345541 /* AppDelegate.swift */,
 				DAE91C2F1C4F635300345541 /* Main.storyboard */,
+				DAD7AE471C5755E70037C91C /* WebViewController.swift */,
 				DAE91C611C53717200345541 /* MapViewController.swift */,
 				DAE91C321C4F635300345541 /* Assets.xcassets */,
 				DAE91C341C4F635300345541 /* LaunchScreen.storyboard */,
+				DA164F021C59FD0D00800F8C /* Localizable.strings */,
 				DAE91C371C4F635300345541 /* Info.plist */,
 			);
 			path = WorldTrotter;
@@ -218,6 +230,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				fr,
 			);
 			mainGroup = DAE91C1F1C4F635300345541;
 			productRefGroup = DAE91C291C4F635300345541 /* Products */;
@@ -237,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE91C361C4F635300345541 /* LaunchScreen.storyboard in Resources */,
+				DA164F001C59FD0D00800F8C /* Localizable.strings in Resources */,
 				DAE91C331C4F635300345541 /* Assets.xcassets in Resources */,
 				DAE91C311C4F635300345541 /* Main.storyboard in Resources */,
 			);
@@ -266,6 +281,7 @@
 				DAE91C5E1C52056700345541 /* ConversionViewController.swift in Sources */,
 				DAE91C621C53717200345541 /* MapViewController.swift in Sources */,
 				DAE91C2C1C4F635300345541 /* AppDelegate.swift in Sources */,
+				DAD7AE481C5755E70037C91C /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +317,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DA164F021C59FD0D00800F8C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA164F011C59FD0D00800F8C /* Base */,
+				DA164F031C59FD1200800F8C /* en */,
+				DA164F041C59FD1300800F8C /* es */,
+				DA164F061C59FE1100800F8C /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DAE91C2F1C4F635300345541 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DAE91C301C4F635300345541 /* Base */,
+				DAD7AE4A1C59F3FE0037C91C /* en */,
+				DAD7AE4B1C59F4E10037C91C /* es */,
+				DA164F051C59FE1100800F8C /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -490,6 +520,7 @@
 				DAE91C521C4F635300345541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAE91C531C4F635300345541 /* Build configuration list for PBXNativeTarget "WorldTrotterTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +529,7 @@
 				DAE91C551C4F635300345541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAE91C561C4F635300345541 /* Build configuration list for PBXNativeTarget "WorldTrotterUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +538,7 @@
 				DAE91C581C4F635300345541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Convert-->
@@ -17,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRy-EV-0fx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRy-EV-0fx">
                                 <rect key="frame" x="54" y="133" width="306" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64f-Js-6UM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is really" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64f-Js-6UM">
                                 <rect key="frame" x="148" y="184" width="119" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,7 +36,7 @@
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61u-Dg-Bs4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61u-Dg-Bs4">
                                 <rect key="frame" x="80" y="327" width="254" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
@@ -59,11 +60,17 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="RRy-EV-0fx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2PE-pE-D45"/>
+                            <constraint firstItem="64f-Js-6UM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4XB-tS-KId"/>
                             <constraint firstItem="61u-Dg-Bs4" firstAttribute="top" secondItem="dY2-Zf-RCv" secondAttribute="bottom" constant="8" id="5RM-1D-fWe"/>
                             <constraint firstItem="RRy-EV-0fx" firstAttribute="top" secondItem="07m-NI-dVe" secondAttribute="bottom" constant="8" id="5fT-nQ-lho"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="64f-Js-6UM" secondAttribute="trailing" id="DHu-Wp-BBr"/>
+                            <constraint firstItem="RRy-EV-0fx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="F27-P8-Avi"/>
                             <constraint firstItem="dY2-Zf-RCv" firstAttribute="centerX" secondItem="RRy-EV-0fx" secondAttribute="centerX" id="FM8-Hi-YBd"/>
                             <constraint firstItem="64f-Js-6UM" firstAttribute="top" secondItem="RRy-EV-0fx" secondAttribute="bottom" constant="8" id="JZS-W2-42m"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="61u-Dg-Bs4" secondAttribute="trailing" id="LSM-mV-TaZ"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="RRy-EV-0fx" secondAttribute="trailing" id="Pl8-iW-i81"/>
                             <constraint firstItem="64f-Js-6UM" firstAttribute="centerX" secondItem="RRy-EV-0fx" secondAttribute="centerX" id="UsM-NJ-Ku0"/>
+                            <constraint firstItem="61u-Dg-Bs4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WPA-7J-FMb"/>
                             <constraint firstItem="dY2-Zf-RCv" firstAttribute="top" secondItem="64f-Js-6UM" secondAttribute="bottom" constant="8" id="dSD-kc-yrQ"/>
                             <constraint firstItem="07m-NI-dVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f7M-4N-B7K"/>
                             <constraint firstItem="61u-Dg-Bs4" firstAttribute="centerX" secondItem="RRy-EV-0fx" secondAttribute="centerX" id="jbF-uy-4pb"/>
@@ -88,22 +95,27 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="304.5" y="387.5"/>
+            <point key="canvasLocation" x="1105" y="-379"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="lBk-o6-NOi">
+            <objects>
+                <viewController id="ypx-kL-qKN" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Web" image="MapIcon" id="ZM1-8o-qdJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMc-j9-MFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="862"/>
         </scene>
         <!--Map-->
-        <scene sceneID="pOT-no-wO7">
+        <scene sceneID="1at-Eq-48r">
             <objects>
-                <viewController id="mzh-Kf-AZq" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="cJh-rR-Zo6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </mapView>
-                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="MC7-aP-0Ng"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                <viewController id="bQo-gb-JHX" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="HXz-xo-XOD"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oVs-6N-ytO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Juh-Vs-QkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="387"/>
+            <point key="canvasLocation" x="1232" y="388"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="n7z-hY-UfX">
@@ -116,12 +128,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="58k-eh-LwI"/>
-                        <segue destination="mzh-Kf-AZq" kind="relationship" relationship="viewControllers" id="WH5-QM-INT"/>
+                        <segue destination="bQo-gb-JHX" kind="relationship" relationship="viewControllers" id="2hS-qS-Lhf"/>
+                        <segue destination="ypx-kL-qKN" kind="relationship" relationship="viewControllers" id="nKJ-UW-8dn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VnD-0P-xFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="387"/>
+            <point key="canvasLocation" x="478" y="25"/>
         </scene>
     </scenes>
     <resources>

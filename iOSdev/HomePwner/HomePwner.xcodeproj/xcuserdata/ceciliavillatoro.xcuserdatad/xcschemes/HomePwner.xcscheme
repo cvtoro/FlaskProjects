@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0640"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA6FA0A01C4CB48D006C953B"
-               BuildableName = "Quiz.app"
-               BlueprintName = "Quiz"
-               ReferencedContainer = "container:Quiz.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA6FA0B51C4CB48D006C953B"
-               BuildableName = "QuizTests.xctest"
-               BlueprintName = "QuizTests"
-               ReferencedContainer = "container:Quiz.xcodeproj">
+               BlueprintIdentifier = "DA3AB09B1CD9E6F500239572"
+               BuildableName = "Homepwner.app"
+               BlueprintName = "Homepwner"
+               ReferencedContainer = "container:Homepwner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DA6FA0B51C4CB48D006C953B"
-               BuildableName = "QuizTests.xctest"
-               BlueprintName = "QuizTests"
-               ReferencedContainer = "container:Quiz.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DA6FA0A01C4CB48D006C953B"
-            BuildableName = "Quiz.app"
-            BlueprintName = "Quiz"
-            ReferencedContainer = "container:Quiz.xcodeproj">
+            BlueprintIdentifier = "DA3AB09B1CD9E6F500239572"
+            BuildableName = "Homepwner.app"
+            BlueprintName = "Homepwner"
+            ReferencedContainer = "container:Homepwner.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DA6FA0A01C4CB48D006C953B"
-            BuildableName = "Quiz.app"
-            BlueprintName = "Quiz"
-            ReferencedContainer = "container:Quiz.xcodeproj">
+            BlueprintIdentifier = "DA3AB09B1CD9E6F500239572"
+            BuildableName = "Homepwner.app"
+            BlueprintName = "Homepwner"
+            ReferencedContainer = "container:Homepwner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DA6FA0A01C4CB48D006C953B"
-            BuildableName = "Quiz.app"
-            BlueprintName = "Quiz"
-            ReferencedContainer = "container:Quiz.xcodeproj">
+            BlueprintIdentifier = "DA3AB09B1CD9E6F500239572"
+            BuildableName = "Homepwner.app"
+            BlueprintName = "Homepwner"
+            ReferencedContainer = "container:Homepwner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
